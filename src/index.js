@@ -29,3 +29,14 @@ console.log(datos.obtenerPosts()); // Accede a la función 'obtenerPosts' del ob
 
 import obtenerUsuario from "./defaulExport"; // Importa la exportación predeterminada del módulo 'defaulExport.js' y la asigna a la constante 'obtenerUsuario'.
 console.log(obtenerUsuario()); // Invoca la función 'obtenerUsuario', que fue exportada por defecto desde 'defaulExport.js', y registra el resultado en la consola.
+
+/*
+ * 📌 Empty Imports:
+ * - En JavaScript, es posible importar un módulo sin importar ningún valor específico de él.
+ * - En este caso, el código del módulo 'emptyExport.js' se ejecutará, pero no se importará ningún objeto, función, o valor específico de ese módulo.
+ * - Este tipo de importación es útil cuando se desea ejecutar el código contenido en un módulo, pero no se necesita acceder a ningún valor exportado por el módulo.
+ * - Esto puede ser beneficioso en situaciones donde un módulo realiza alguna inicialización o configuración necesaria.
+ *
+ * Ejemplo:*/
+
+import "./emptyExport"; // Esta línea importa y ejecuta el código contenido en 'emptyExport.js', pero no importa ningún valor específico.
