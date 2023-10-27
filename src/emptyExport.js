@@ -6,4 +6,5 @@
  * - Esto puede ser útil en situaciones donde un módulo realiza alguna inicialización o configuración que es necesaria, pero no proporciona ningún valor o función que necesite ser utilizado en otros lugares.
  *
  * Ejemplo:*/
+
 console.log("Soy código que se ejecuta desde el archivo emptyExport.js"); // Esta línea se ejecutará cuando el módulo sea importado en otro módulo, aunque no haya ninguna exportación.
