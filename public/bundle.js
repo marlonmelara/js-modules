@@ -23,6 +23,35 @@ const obtenerPosts = () => {
 };
 
 /*
+ * La exportación default se utiliza para exportar una única expresión por módulo. Este tipo de exportación puede ser importada usando cualquier nombre en otro módulo. Es útil cuando un módulo solo exporta una cosa, como una clase o una función.
+
+ * 👉 Forma 1 - Mediante las palabras: export default:
+ * - Aquí, se exporta la función directamente como exportación default.
+ *
+ * Ejemplo:
+ * export default () => {  // Exporta por default una función anónima que retorna un objeto.
+ *   return {
+ *     nombre: "Snoopy",
+ *     correo: "snoopy@mail.com",
+ *   };
+ * };
+ */
+
+/* 👉 Forma 2 - Final del documento:
+ * - En este caso, se declara la función primero y luego se exporta como exportación default al final del documento.
+ *
+ * Ejemplo:
+ */
+
+const obtenerUsuario = () => {
+  // Declara la función 'obtenerUsuario'.
+  return {
+    nombre: "Snoopy",
+    correo: "snoopy@mail.com",
+  };
+};
+
+/*
  * 📌 Named Imports:
  * - Permiten importar específicamente ciertos valores desde un módulo, identificándolos por su nombre.
  * - Pueden renombrarse en la importación usando la palabra clave 'as'.
@@ -32,6 +61,7 @@ const obtenerPosts = () => {
  * console.log(`Mi nombre es ${nombreImportado}`); // Acceso y uso de la variable renombrada 'nombreImportado'.
  * console.log(obtenerPosts()); // Acceso y uso de la función 'obtenerPosts' importada.
  *
+
  * 📌 Namespace Imports:
  * - Permiten importar todo el contenido de un módulo como un único objeto, accediendo luego a sus exportaciones mediante propiedades de este objeto.
  * - Se utiliza la sintaxis import * as <alias> from 'ruta';
@@ -39,3 +69,4 @@ const obtenerPosts = () => {
  * Ejemplo:  */
 console.log(`Me llamo ${nombre}`); // Accede a la propiedad 'nombre' del objeto 'datos'.
 console.log(obtenerPosts()); // Accede a la función 'obtenerPosts' del objeto 'datos' y la ejecuta.
+console.log(obtenerUsuario()); // Invoca la función 'obtenerUsuario', que fue exportada por defecto desde 'defaulExport.js', y registra el resultado en la consola.
